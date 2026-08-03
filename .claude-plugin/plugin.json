@@ -1,5 +1,5 @@
 {
-  "name": "stitch-skills",
+  "name": "stitch-skill",
   "description": "Google Stitch workflows with an SDK-backed runner",
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

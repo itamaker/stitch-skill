@@ -62,7 +62,7 @@ skills/stitch/scripts/run.sh save-config --config ./.stitch.json --api-key "$STI
   },
   "runtime": {
     "dir": "~/.cache/itamaker-skills/stitch-sdk",
-    "sdkPackage": "@google/stitch-sdk@0.1.1"
+    "sdkPackage": "@google/stitch-sdk@0.3.5"
   }
 }
 ```
@@ -94,7 +94,7 @@ skills/stitch/scripts/run.sh save-config --config ./.stitch.json --api-key "$STI
 ## Runtime fields
 
 - `runtime.dir`: where the runner installs `@google/stitch-sdk`.
-- `runtime.sdkPackage`: package spec to install on bootstrap. Defaults to `@google/stitch-sdk@0.1.1`. Pin a different version (for example `@google/stitch-sdk@next`) when the user wants to track preview releases.
+- `runtime.sdkPackage`: package spec to install on bootstrap. Defaults to `@google/stitch-sdk@0.3.5`. Pin a different version (for example `@google/stitch-sdk@next`) when the user wants to track preview releases.
 
 ## Operational advice
 

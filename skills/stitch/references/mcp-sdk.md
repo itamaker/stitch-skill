@@ -1,6 +1,6 @@
 # Stitch SDK Runner Reference
 
-This reference focuses on the executable runner bundled with the skill and the official `@google/stitch-sdk` surface it wraps. Tracks the v0.1.1 release of the SDK (and the `next` channel where called out).
+This reference focuses on the executable runner bundled with the skill and the official `@google/stitch-sdk` surface it wraps. Tracks the v0.3.5 release of the SDK (and the `next` channel where called out). The documented class surface (`Stitch`, `Project`, `Screen`, `DesignSystem`, `StitchToolClient`, `StitchProxy`) has been stable since v0.1.1 through v0.3.5 — the version bumps in between were maintenance releases, not API changes.
 
 ## Bundled runner
 
@@ -121,6 +121,19 @@ const result = await stitch.callTool("create_project", { title: "My App" });
 ```
 
 Older releases also exposed `stitch.createProject(title)`; the runner's `create-project` command uses whichever path the installed SDK supports.
+
+## Offline tool introspection
+
+`toolMap` and `toolDefinitions` (static exports, also on `stitch.toolMap`) list every tool's pre-parsed parameters without a network call or API key:
+
+```ts
+import { stitch } from "@google/stitch-sdk";
+
+const tool = stitch.toolMap.get("generate_screen_from_text");
+const required = tool.params.filter(p => p.required).map(p => p.name);
+```
+
+Reach for this instead of a live `list-tools` call when the user wants to inspect available tools/parameters and no `STITCH_API_KEY` is configured yet.
 
 ## Enums
 

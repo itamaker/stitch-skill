@@ -7,7 +7,7 @@ description: Request Google Stitch through the bundled SDK runner or by writing 
 
 Use this skill when the task needs to actually talk to the Stitch service. Prefer the bundled runner in `scripts/run.sh` over ad-hoc one-off code when the request is operational: listing projects, generating screens, editing, variants, design systems, or exports.
 
-The runner wraps the official `@google/stitch-sdk` (v0.1.1+) and exposes the same surface as the documented Stitch SDK at `stitch.withgoogle.com/docs`.
+The runner wraps the official `@google/stitch-sdk`, pinned to v0.3.5 by default (override with `--sdk-package`), and exposes the same surface as the documented Stitch SDK at `stitch.withgoogle.com/docs`.
 
 ## Workflow
 

@@ -1,27 +1,27 @@
-# stitch-skills
+# stitch-skill
 
-Standalone agent skill for Google Stitch workflows. Wraps the official [`@google/stitch-sdk`](https://github.com/google-labs-code/stitch-sdk) (v0.1.1) so an agent can drive Stitch projects, screens, variants, and design systems through a single CLI runner — or write committed TypeScript against the SDK when an integration calls for it.
+Standalone agent skill for Google Stitch workflows. Wraps the official [`@google/stitch-sdk`](https://github.com/google-labs-code/stitch-sdk), pinned to v0.3.5 by default, so an agent can drive Stitch projects, screens, variants, and design systems through a single CLI runner — or write committed TypeScript against the SDK when an integration calls for it.
 
 ## Install
 
 Standalone (default `skills` CLI):
 
 ```bash
-npx skills add itamaker/stitch-skills
+npx skills add itamaker/stitch-skill
 ```
 
 Or via the [`itamaker/skills`](https://github.com/itamaker/skills) Claude Code plugin marketplace:
 
 ```text
 /plugin marketplace add itamaker/skills
-/plugin install stitch-skills@itamaker-skills
+/plugin install stitch-skill@itamaker-skills
 ```
 
 ## What the skill covers
 
 - **Projects & screens** — `list-projects`, `create-project`, `list-screens`, `get-screen`, `generate`, `edit`, `download-html`, `download-image`.
 - **Variants** — `variants` with `--variant-count`, `--creative-range`, `--aspects`.
-- **Design systems** *(new in v0.2.0)* — `list-design-systems`, `create-design-system`, `update-design-system`, `apply-design-system`. Each design-system command accepts JSON via `--*-file <path>` or `--*-json '{...}'`.
+- **Design systems** — `list-design-systems`, `create-design-system`, `update-design-system`, `apply-design-system`. Each design-system command accepts JSON via `--*-file <path>` or `--*-json '{...}'`.
 - **Auth** — `STITCH_API_KEY` for direct keys, or `STITCH_ACCESS_TOKEN` + `GOOGLE_CLOUD_PROJECT` for OAuth. `STITCH_HOST` overrides the MCP endpoint.
 - **Config** — resolves from `--config`, `STITCH_SKILL_CONFIG`, `.stitch.json`, or `stitch.json`. `save-config` / `--save-config` persists resolved values.
 - **Low-level tools** — `list-tools` and `call-tool` expose the underlying Stitch MCP tools (`create_project`, `generate_screen_from_text`, `edit_screens`, `generate_variants`, design-system tools, etc.).
@@ -54,10 +54,11 @@ skills/
 
 ## Versioning
 
+- v0.3.0 — bump default `@google/stitch-sdk` pin from 0.1.1 to 0.3.5 (maintenance releases upstream; documented class surface unchanged) and document offline `toolMap` introspection.
 - v0.2.0 — `@google/stitch-sdk@0.1.1` alignment + design-system commands.
 - v0.1.0 — initial standalone release.
 
-See [Releases](https://github.com/itamaker/stitch-skills/releases) for full notes.
+See [Releases](https://github.com/itamaker/stitch-skill/releases) for full notes.
 
 ## License
 

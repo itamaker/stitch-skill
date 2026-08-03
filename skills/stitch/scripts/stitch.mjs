@@ -16,7 +16,7 @@ const CONFIG_ENV_VAR = "STITCH_SKILL_CONFIG";
 const DEFAULT_CONFIG_NAMES = [".stitch.json", "stitch.json"];
 const DEFAULT_BASE_URL = "https://stitch.googleapis.com/mcp";
 const DEFAULT_TIMEOUT_MS = 300000;
-const DEFAULT_SDK_PACKAGE = "@google/stitch-sdk@0.1.1";
+const DEFAULT_SDK_PACKAGE = "@google/stitch-sdk@0.3.5";
 const DEFAULT_RUNTIME_DIR_TEMPLATE = "~/.cache/itamaker-skills/stitch-sdk";
 const DEFAULT_RUNTIME_DIR = path.join(
   process.env.XDG_CACHE_HOME || path.join(os.homedir(), ".cache"),

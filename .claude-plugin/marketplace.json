@@ -1,15 +1,15 @@
 {
-  "name": "itamaker-stitch-skills",
+  "name": "itamaker-stitch-skill",
   "owner": {
     "name": "Jonny"
   },
   "metadata": {
     "description": "Reusable Google Stitch skill from itamaker",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
-      "name": "itamaker-stitch-skills",
+      "name": "itamaker-stitch-skill",
       "description": "Request Google Stitch through a bundled SDK runner, with configurable auth and generation parameters",
       "source": "./",
       "strict": false,

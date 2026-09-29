@@ -1,5 +1,7 @@
 # stitch-skill
 
+> **Moved.** The skill in this repository now lives in [itamaker/skills](https://github.com/itamaker/skills/tree/main/skills/web/stitch), together with my other skills. Install from there: `npx skills@latest add itamaker/skills --skill=stitch`.
+
 Standalone agent skill for Google Stitch workflows. Wraps the official [`@google/stitch-sdk`](https://github.com/google-labs-code/stitch-sdk), pinned to v0.3.5 by default, so an agent can drive Stitch projects, screens, variants, and design systems through a single CLI runner — or write committed TypeScript against the SDK when an integration calls for it.
 
 ## Install
